@@ -10,8 +10,7 @@ function App() {
       <BookContextProvider>
         <Navbar/>
         <BookList/>
-        <BookForm />
-
+        <BookForm/>
       </BookContextProvider>
       
     </div>

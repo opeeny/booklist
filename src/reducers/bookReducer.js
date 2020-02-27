@@ -1,5 +1,6 @@
 import uuid from 'uuid/v1';
 
+//all the application's state logic is one place
 export const bookReducer = (state, action) => {
     switch(action.type) {
         case 'ADD_BOOK':
