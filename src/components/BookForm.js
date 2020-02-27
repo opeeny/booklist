@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import { BookContext } from '../contexts/BookContext';
 
 const BookForm = () => {
-    const { addBook } = useContext(BookContext);
+    const { dispatch } = useContext(BookContext);
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     //
@@ -10,7 +10,8 @@ const BookForm = () => {
       
         e.preventDefault();
         console.log(title, author);
-        addBook(title, author);
+        //Type then action or payload e.g book property
+        dispatch({type: 'ADD_BOOK', bk: {title, author}});
         setTitle('');
         setAuthor('');
        
